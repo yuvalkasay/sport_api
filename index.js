@@ -5,19 +5,19 @@ const cheerio = require("cheerio");
 
 const newspapers = [
   {
-    name: "thetimes",
-    address: "https://www.thetimes.co.uk/environment/climate-change",
+    name: "The Guardian",
+    address: "https://www.theguardian.com/football",
     base: "",
   },
   {
-    name: "guardian",
-    address: "https://www.theguardian.com/environment/climate-crisis",
-    base: "",
+    name: "ESPN",
+    address: "https://www.espn.com/soccer/",
+    base: "https://www.espn.com/soccer",
   },
   {
-    name: "telegraph",
-    address: "https://www.telegraph.co.uk/climate-change",
-    base: "https://www.telegraph.co.uk",
+    name: "Sky Sports",
+    address: "https://www.skysports.com/football",
+    base: "",
   },
 ];
 
@@ -30,7 +30,7 @@ newspapers.forEach((newspaper) => {
     const html = response.data;
     const $ = cheerio.load(html);
 
-    $('a:contains("climate")', html).each(function () {
+    $('a:contains("transfer")', html).each(function () {
       const title = $(this).text();
       const url = $(this).attr("href");
 
@@ -44,7 +44,7 @@ newspapers.forEach((newspaper) => {
 });
 
 app.get("/", (req, res) => {
-  res.json("welcome to my Climate change use api");
+  res.json("Welcome to my football transfer API");
 });
 
 app.get("/news", (req, res) => {
