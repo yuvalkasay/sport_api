@@ -68,7 +68,7 @@ app.get("/news/:newspaperId", (req, res) => {
       const $ = cheerio.load(html);
       const specificArticles = [];
 
-      $('a:contains("climate")', html).each(function () {
+      $('a:contains("transfer")', html).each(function () {
         const title = $(this).text();
         const url = $(this).attr("href");
         specificArticles.push({
