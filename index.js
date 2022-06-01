@@ -5,17 +5,17 @@ const cheerio = require("cheerio");
 
 const newspapers = [
   {
-    name: "The Guardian",
+    name: "theguardian",
     address: "https://www.theguardian.com/football",
     base: "",
   },
   {
-    name: "ESPN",
+    name: "espn",
     address: "https://www.espn.com/soccer/",
     base: "https://www.espn.com/soccer",
   },
   {
-    name: "Sky Sports",
+    name: "skysports",
     address: "https://www.skysports.com/football",
     base: "",
   },
