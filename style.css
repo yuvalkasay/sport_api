@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: system-ui;
+  color: #555;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user {
+  padding: 1rem;
+  width: 32rem;
+  border-radius: 0.7rem;
+  margin: 15px 1rem;
+  background-color: #f3f3f3;
+}
+
+.link {
+  text-decoration: none;
+}
+
+p,
+h4,
+a {
+  margin-bottom: 0.6rem;
+}

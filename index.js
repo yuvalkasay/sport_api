@@ -10,14 +10,14 @@ const newspapers = [
     base: "",
   },
   {
-    name: "espn",
-    address: "https://www.espn.com/soccer/",
-    base: "https://www.espn.com/soccer",
-  },
-  {
     name: "skysports",
     address: "https://www.skysports.com/football",
     base: "",
+  },
+  {
+    name: "espn",
+    address: "https://www.espn.com/soccer/transfers-news-and-features/",
+    base: "https://www.espn.com/soccer",
   },
 ];
 
@@ -33,6 +33,9 @@ newspapers.forEach((newspaper) => {
     $('a:contains("transfer")', html).each(function () {
       const title = $(this).text();
       const url = $(this).attr("href");
+      console.log(newspaper);
+      console.log("title:", title);
+      console.log("url:", url);
 
       articles.push({
         title,
@@ -71,6 +74,7 @@ app.get("/news/:newspaperId", (req, res) => {
       $('a:contains("transfer")', html).each(function () {
         const title = $(this).text();
         const url = $(this).attr("href");
+
         specificArticles.push({
           title,
           url: newspaperBase + url,
