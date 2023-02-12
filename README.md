@@ -8,5 +8,3 @@ $('a:contains("transfer")', html).each(function () {
 ```
 
 You can pull data from a single source, or from all the sources - https://footballtransferapi.herokuapp.com/news/.
-
-And as well test it right here: https://rapidapi.com/yuvalitos0-PZalI5gW6JE/api/football-transfer-news1.
